@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ksana
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+    = tinymce_assets
+    = yield :head
+  %body.interior-page-background
+    = render 'layouts/navigation'  
+    .container.page-container
+      .notice
+        =notice
+      .alert
+        =alert
+      .main
+        = yield
+    %footer.interior-footer
+      = render 'layouts/footer'

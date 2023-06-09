@@ -1,0 +1,11 @@
+rails g scaffold status name:string
+
+rails g scaffold clients name:string
+
+rails g scaffold products name:string client:references description:text
+
+rails g scaffold projects user:references name:string due_at:timestamp description:text status:references product:references
+
+rails g scaffold tasks user:references name:string project:references notes:text status:references
+
+rails g scaffold log user:references start_at:timestamp end_at:timestamp notes:text

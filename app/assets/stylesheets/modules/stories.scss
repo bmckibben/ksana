@@ -1,0 +1,92 @@
+#stories{
+  .index-table {
+    width: 100%
+  }
+  .card {
+    color: #000;
+    background-color: #fff;
+    font-size: 12pt;
+    font-family: 'Courier New';
+    th {
+      padding: 2px 5px;
+    }
+    td {
+      padding: 2px 5px;
+    }
+    .panel-body {
+      padding: 0 0 0 15px;
+    } 
+    tr {
+      border-top: 1px solid #000;
+    } 
+    tr:first-of-type {
+      border-top: none;
+    } 
+  } 
+
+}
+
+#sections {
+  .card{
+    color: #000;
+    padding: 0.5rem;
+    min-height: 10rem;
+  }
+
+  textarea.form-control, input[type="text"].form-control, select.form-control {
+    min-height: 1rem;
+    height: 1.2rem;
+    font-size: 12pt;
+    font-family: 'Courier New'; 
+    padding: 0;   
+  }
+
+  #section_title {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: rokkitt, serif;
+  }
+  .section-body {
+    font-size: 1.5rem;
+    min-height: 70vh;
+    line-height: 1.3rem;
+    padding: 1rem;
+    border: none;
+  }  
+  .section-sample {
+    font-family: rokkitt, serif;
+    font-size: 1.5rem;
+    min-height: 70vh;
+    padding: 1rem;
+    border: none;
+    p {
+      vertical-align: baseline; 
+      white-space: pre-wrap;
+      line-height: 2.4; 
+      text-indent: 36pt; 
+      margin-top: 0pt; 
+      margin-bottom: 0pt;
+    }
+    p:first-child{
+      text-indent: 0;
+    }     
+  } 
+  .rounded{
+    border-radius: 1rem;
+  }
+  .scroller-container{
+    overflow-y: scroll;
+    min-height:100%;
+    height:800px;
+    background-color: #fff;
+    margin-top: 2rem;
+    color: #777777;
+  } 
+}
+
+@media (max-width: 767px){
+  #sections .scroller-container {
+  max-height: 70vh;
+  margin-top: 3rem;
+  }
+}  

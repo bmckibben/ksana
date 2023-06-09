@@ -1,0 +1,50 @@
+%h1 Listing draws
+
+%table.draw-table
+  %thead
+    %tr
+      %th Draw date
+      %th B1
+      %th S1
+      %th B2
+      %th S2
+      %th B3
+      %th S3
+      %th B4
+      %th S4
+      %th B5
+      %th S5
+      %th PB
+      %th SB
+      %th
+        = link_to 'New Draw', new_draw_path, class: "btn-link"
+      %th
+        = link_to 'New Pick', new_pick_path, class: "btn-link"
+      %th
+        = link_to 'Scores', scores_path, class: "btn-link"
+
+  %tbody
+    - @draws.each do |draw|
+      %tr
+        %td= draw.draw_date.strftime("%d %b %y")
+        %td.shaded 
+          = draw.b1
+        %td= draw.s1
+        %td.shaded 
+          = draw.b2
+        %td= draw.s2
+        %td.shaded 
+          = draw.b3
+        %td= draw.s3
+        %td.shaded 
+          = draw.b4
+        %td= draw.s4
+        %td.shaded 
+          = draw.b5
+        %td= draw.s5
+        %td.shaded 
+          = draw.powerball
+        %td= draw.powerscore
+        %td= link_to 'Show', draw
+        %td= link_to 'Edit', edit_draw_path(draw)
+        %td= link_to 'Destroy', draw, method: :delete, data: { confirm: 'Are you sure?' }

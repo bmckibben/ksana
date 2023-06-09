@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @task.user
+%p
+  %b Name:
+  = @task.name
+%p
+  %b Project:
+  = @task.project
+%p
+  %b Notes:
+  = @task.notes
+%p
+  %b Status:
+  = @task.status
+
+= link_to 'Edit', edit_task_path(@task)
+\|
+= link_to 'Back', tasks_path

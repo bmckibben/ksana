@@ -1,0 +1,37 @@
+body.interior-page-background {	
+	background: linear-gradient(to bottom, black 0%, #000099 100%) no-repeat center center fixed;
+	color: #fff;
+	//background: #000000 no-repeat center center fixed;
+}
+
+.page-container {
+	min-height: 95vh; /* will cover the 95% of viewport, leaving room for footer */
+	overflow: hidden;
+	display: block;
+	position: relative;
+	padding-bottom: 6rem; /* height of your footer */
+}
+
+.btn-sm{
+	padding: 9px 24px;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+  font-family: $rokkitt;
+  color: #2c343b;
+  background-color: #f2f2f2;
+}
+
+.hidden {
+	display: none;
+}
+
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 100%;
+  }
+}
