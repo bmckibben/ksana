@@ -1,0 +1,47 @@
+.ksana_log{
+  margin-top: 2rem;
+  font-size: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 10px;
+  background-color: transparent;
+  textarea{
+    height: 30px;
+    border:  none;
+    font-size: 2rem;
+  }
+  .hidden {
+    display: none;
+  }
+  i{
+    cursor: pointer;
+  }
+  input {
+    margin-bottom: auto !important;
+  }
+
+
+  .start{
+    color: #0f0;
+    font-size: 2rem;
+    cursor:  pointer;
+    float: right;
+  }
+
+  .stop{
+    color: #f00;
+    font-size: 2rem;
+    cursor:  pointer; 
+    display: none;
+    float: right;
+  }
+
+  .display {
+    font-family: rokkitt, serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .bi-clock-fill {
+    font-size: 2rem;
+  }
+}  

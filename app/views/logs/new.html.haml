@@ -1,5 +1,24 @@
 - content_for :head do
   = javascript_import_module_tag "../assets/stopwatch"
 
-= render 'form'
-
+.panel.panel-default.ksana_log
+  .panel-body
+    = simple_form_for(@log, remote: true, authenticity_token: true, html: {id: 'timer'}) do |t|     
+      .row
+        .col-md-2
+          = link_to root_path, class: 'navbar-brand text-bold' do
+            %h2
+              %i.bi.bi-clock-fill
+              = "Ksana"
+        - if signed_in?       
+          .col-md-4
+            = t.input :start_at, as: :hidden
+            = t.input :end_at, as: :hidden
+            = t.input :description, placeholder: 'What are you doing?', label: false
+          .col-md-3
+            = t.input :task_id, placeholder: 'This will be a task select', label: false
+          .col-md-2
+            .display
+              = "00:00:00"
+            %i.bi.bi-play-circle-fill.start
+            %i.bi.bi-stop-circle-fill.stop

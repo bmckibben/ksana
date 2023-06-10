@@ -24,11 +24,11 @@ $(document).ready(function () {
 	      }
 	    }
 	  }
-	  $(".display").html(`${String(h).padStart(2, "0")} : ${String(m).padStart(2,"0")} : ${String(s).padStart(2,"0")} : ${String(ms).padStart(3, "0")}`);
+	  $(".display").html(`${String(h).padStart(2, "0")}:${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`);
 	}
 
 	$(".stop").on("click", function() {
-	  $(".display").html("00 : 00 : 00 : 000");
+	  $(".display").html("00:00:00");
 	  h = 0;
 	  m = 0;
 	  s = 0;
