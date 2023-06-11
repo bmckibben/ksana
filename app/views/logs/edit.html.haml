@@ -1,7 +1,7 @@
-%h1 Editing log
+%main.container
+  = link_to sanitize("&larr; Back to log"), log_path(@log) 
 
-= render 'form'
+  .header
+    %h1 Edit log
 
-= link_to 'Show', @log
-\|
-= link_to 'Back', logs_path
+  = render "form", log: @log 

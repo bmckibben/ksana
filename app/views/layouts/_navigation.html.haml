@@ -1,15 +1,19 @@
-.navbar.navbar-expand-lg
-	.container-fluid
-		#navbar.navbar-right.pull-right
-			%ul.nav.navbar-nav
-				%li
-					=link_to 'Home', root_path
-				%li
-					=link_to 'Log Time', new_log_path
 
-				-if user_signed_in?
-					%li
-						=link_to 'Sign out', destroy_user_session_path, method: :delete 
-				-else
-					%li
-					=link_to 'Login', new_user_session_path
+.navbar.navbar-expand-lg
+  .container-fluid
+    = link_to root_path, class: 'navbar-brand text-bold' do
+      %i.bi.bi-clock-fill
+      = "Ksana"
+    #navbar.navbar-right.pull-right
+      %ul.nav.navbar-nav
+        %li
+          =link_to 'Home', root_path
+        %li
+          =link_to 'Log Time', logs_path
+
+        -if user_signed_in?
+          %li
+            =link_to 'Sign out', destroy_user_session_path, method: :delete 
+        -else
+          %li
+            =link_to 'Login', new_user_session_path

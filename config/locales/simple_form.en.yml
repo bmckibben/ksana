@@ -13,9 +13,13 @@ en:
     placeholders:
       wiki:
         title: Name of your wkik
+      log:
+        description: What did you do?  
     labels:
       wiki:
-        title: Title      
+        title: Title 
+      log:
+        description: Action       
     # Examples
     # labels:
     #   defaults:
@@ -38,6 +42,9 @@ en:
 
   helpers:
     submit:
+      log:
+        create: Create log
+        update: Update log
       wiki:
         create: Create Wiki
         update: Update Wiki

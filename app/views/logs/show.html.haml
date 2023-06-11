@@ -1,18 +1,22 @@
-%p#notice= notice
+%main.container
+  = link_to sanitize("&larr; Back to logs"), logs_path 
+  %p#notice= notice
 
-%p
-  %b User:
-  = @log.user
-%p
-  %b Start at:
-  = @log.start_at
-%p
-  %b End at:
-  = @log.end_at
-%p
-  %b Notes:
-  = @log.notes
+  .header
+    %h1 
+      = @log.description
 
-= link_to 'Edit', edit_log_path(@log)
-\|
-= link_to 'Back', logs_path
+  %p
+    %b User:
+    = @log.user.full_name
+  %p
+    %b Start at:
+    = @log.start_at
+  %p
+    %b End at:
+    = @log.end_at
+  %p
+    %b Notes:
+    = @log.notes
+
+

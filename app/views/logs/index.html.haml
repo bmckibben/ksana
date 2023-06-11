@@ -1,27 +1,6 @@
-%h1 Listing logs
+.container
+  .header
+    %h2 Task Logs
+    =link_to "New Entry", new_log_path, class: "btn btn--primary" 
 
-%table
-  %thead
-    %tr
-      %th User
-      %th Start at
-      %th End at
-      %th Notes
-      %th
-      %th
-      %th
-
-  %tbody
-    - @logs.each do |log|
-      %tr
-        %td= log.user
-        %td= log.start_at
-        %td= log.end_at
-        %td= log.notes
-        %td= link_to 'Show', log
-        %td= link_to 'Edit', edit_log_path(log)
-        %td= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Log', new_log_path
+  = render @logs 

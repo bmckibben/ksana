@@ -1,0 +1,8 @@
+.log
+  = link_to log.description, log_path(log)
+  .log__actions
+    = button_to log_path(log), method: :delete, class: "btn btn--light" do
+      %i.bi.bi-trash-fill
+
+    = link_to edit_log_path(log), class: "btn btn--light" do
+      %i.bi.bi-pencil-fill
