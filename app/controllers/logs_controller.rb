@@ -11,6 +11,12 @@ class LogsController < InheritedResources::Base
 
   def new
     @log = Log.new(user_id: current_user.id)
+    @task_options = Project.all.includes(:tasks)
+    @task_options.each do |project|
+      project.tasks.each do |task|
+        puts "#{task.name}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+      end
+    end
   end
 
   def create

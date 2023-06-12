@@ -11,7 +11,7 @@
             = t.input :end_at, as: :hidden
             = t.input :description, placeholder: 'What are you doing?', label: false
           .col-md-3
-            = t.input :task_id, placeholder: 'This will be a task select', label: false
+            = t.input :task_id, @task_options, as: :grouped_select, group_method: :name
           .col-md-2.display
             = "00:00:00"
           .col-md-1    

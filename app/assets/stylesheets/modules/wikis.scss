@@ -202,24 +202,24 @@ ul.tree {
 }
 
 /*.nav > li > a:link {
-  color: $cyan;
+  color: var(--color-cyan);
 }*/
 
 .nav > li > a {
-  color: $cyan;
+  color: var(--color-cyan);
 }
 
 .nav > li > a:hover {
-  color: $magenta;
+  color: var(--color-magenta);
 }
 
 .tree-menu {
-  color: $cyan;
+  color: var(--color-cyan);
   font-size: 14px;
 }
 
 .wiki-menu {
-  color: $cyan;
+  color: var(--color-cyan);
   font-size: 14px;
     display:inline;
 }

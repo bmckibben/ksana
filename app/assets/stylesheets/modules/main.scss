@@ -14,9 +14,9 @@ body {
   font-size: 14px;
 }
 
-a { color: $cyan; }
+a { color: var(--color-cyan); }
 
-a:hover { color: $magenta; }
+a:hover { color: var(--color-magenta); }
 
 
 
