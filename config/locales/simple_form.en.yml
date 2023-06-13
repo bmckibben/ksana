@@ -14,7 +14,10 @@ en:
       wiki:
         title: Name of your wkik
       log:
-        description: What did you do?  
+        task: Select Task
+        description: What did you do? 
+        start_at: Started
+        end_at: Ended 
     labels:
       wiki:
         title: Title 
@@ -42,9 +45,6 @@ en:
 
   helpers:
     submit:
-      log:
-        create: Create log
-        update: Update log
       wiki:
         create: Create Wiki
         update: Update Wiki

@@ -1,16 +1,19 @@
 -# frozen_string_literal: true
-= simple_form_for(@log) do |f|
+= simple_form_for @log do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+  .row
+    .col-md-3
+      = f.input :user_id, as: :hidden
+      = f.input :task_id, collection: Task.all, label: false
+    .col-md-4
+      = f.input :description, label: false
+    .col-md-2
+      = f.input :start_at, as: :string, label: false
+    .col-md-2
+      = f.input :end_at, as: :string, label: false
+    .col-md-1.save-div
+      = link_to root_path do
+        %i.bi.bi-save2-fill
 
-  .form-inputs
-    = f.input :user_id
-    = f.input :start_at, as: :string
-    = f.input :end_at, as: :string
-    = f.input :description
-    = t.input :task
-    = f.input :notes
-
-  .form-actions
-    = f.button :submit, class: "btn btn--secondary"
 

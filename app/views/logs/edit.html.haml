@@ -3,5 +3,5 @@
 
   .header
     %h1 Edit log
-
-  = render "form", log: @log 
+  = turbo_frame_tag "log_#{@log.id}" do
+    = render "form", log: @log 

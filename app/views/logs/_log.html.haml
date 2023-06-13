@@ -1,12 +1,13 @@
-.log
-  = log.task_name
-  = link_to log.description, log_path(log)
-  .log__actions
-    = button_to log_path(log), method: :delete do
-      %i.bi.bi-trash-fill
+= turbo_frame_tag "log_#{log.id}" do 
+  .log
+    = log.task_name
+    = link_to log.description, log_path(log)
+    .log__actions
+      = button_to log_path(log), method: :delete do
+        %i.bi.bi-trash-fill
 
-    = link_to edit_log_path(log) do
-      %i.bi.bi-pencil-fill
+      = link_to edit_log_path(log) do
+        %i.bi.bi-pencil-fill
 
-    = link_to new_log_path do
-      %i.bi.bi-play-fill  
+      = link_to new_log_path do
+        %i.bi.bi-play-fill  

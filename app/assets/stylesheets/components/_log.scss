@@ -11,6 +11,7 @@
   box-shadow: var(--shadow-small);
   // margin-bottom: var(--space-m);
   padding: var(--space-xs);
+  font-size: var(--font-size-l);
 
   @include media(tabletAndUp) {
     padding: var(--space-xs) var(--space-m);
@@ -28,5 +29,24 @@
     background: transparent;
     color: var(--color-cyan);
     border: none;
+  }
+  .bi{
+    font-size: 1rem;
+  }
+
+}
+.edit_log, .new_log {
+  .bi{
+    font-size: 1rem;
+  }
+  .form-control{
+    padding: 0;
+    margin: 0.5rem;
+    .is-valid{
+      background-image: none;
+    }
+  }
+  .save-div{
+    padding-top: 0.75rem;
   }
 }

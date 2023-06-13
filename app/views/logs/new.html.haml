@@ -4,4 +4,5 @@
   .header
     %h1 New log
 
-  = render "form", log: @log
+  = turbo_frame_tag "second_frame" do
+    = render "form", log: @log
