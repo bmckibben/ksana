@@ -22,9 +22,17 @@
     flex: 0 0 auto;
     align-self: flex-start;
     gap: var(--space-xs);
-    margin-left: auto;
+    //margin-left: auto;
     order: 2
   }
+  &__time {
+    display: flex;
+    flex: 0 0 auto;
+    align-self: flex-start;
+    gap: var(--space-xs);
+    margin-left: auto;
+    order: 2
+  }  
   button[type="submit"] {
     background: transparent;
     color: var(--color-cyan);

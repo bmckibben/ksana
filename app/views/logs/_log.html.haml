@@ -2,6 +2,8 @@
   .log
     = log.task_name
     = link_to log.description, log_path(log)
+    .log__time
+      = log.elapsed
     .log__actions
       = button_to log_path(log), method: :delete do
         %i.bi.bi-trash-fill

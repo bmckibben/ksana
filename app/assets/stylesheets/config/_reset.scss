@@ -1,7 +1,7 @@
 body.interior-page-background {	
-	background: linear-gradient(to bottom, black 0%, #000099 100%) no-repeat center center fixed;
+	//background: linear-gradient(to bottom, black 0%, #000099 100%) no-repeat center center fixed;
 	color: #fff;
-	//background: #000000 no-repeat center center fixed;
+	background: #000000 no-repeat center center fixed;
 }
 
 .page-container {
@@ -37,7 +37,20 @@ body {
 }
 
 .turbo-frame-error {
-color: var(--color-magenta);
-font-size: 1.5rem;
-margin: 10px;
+	color: var(--color-magenta);
+	font-size: 1.5rem;
+	margin: 10px;
+}
+
+.was-validated .custom-select:valid {
+  background-image: none;
+}
+
+
+.was-validated .custom-select:invalid {
+  background-image: none;
+}
+
+.form-control.is-invalid{
+    background-image: none;
 }
