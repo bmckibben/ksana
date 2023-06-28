@@ -1,8 +1,9 @@
 .container
-
-  .header
-    %h2 Task Time Logs
-    =link_to "New Entry", new_log_path, class: "btn btn--primary" 
+  = turbo_frame_tag "first_turbo_frame" do
+    .header
+      %h2 Task Time Logs
+      =link_to "New Entry", new_log_path, data: {turbo_frame: "second_frame"}, class: "btn btn--primary" 
 
   .panel
-    = render @logs 
+    = turbo_frame_tag "second_frame" do
+      = render @logs 
